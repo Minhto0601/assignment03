@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Project Charter</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: blue;
+      }
+      h1 {
+        margin-bottom: 30px;
+        border-bottom: 1px black solid;
+        padding: 10px;
+        margin: 10px;
+        color: #1971c2;
+        font-weight: bold;
+        font-size: 36px;
+      }
+      .icon {
+        height: 36px;
+        width: 36px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+      }
+      /* Container */
+      .container-fluid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-rows: 1.2fr 1fr;
+        gap: 25px;
+        margin: 20px 40px;
+      }
+
+      /* Goal */
+
+      .goals {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        align-items: center;
+        gap: 50px;
+        border-bottom: 1px rgb(222, 221, 221) solid;
+      }
+      /* Team*/
+      .team .grid {
+        border: 0;
+      }
+      /* Timeline */
+      .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #7950f2;
+        border: 1px black solid;
+        color: white;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .timeline {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+      }
+      .timeline .grid {
+        border: 0;
+      }
+      .timeline .detail {
+        border-bottom: 1px #99e9f2 dashed;
+      }
+      /* Scopes */
+      .scopes .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .scopes .grid {
+        border: 0;
+      }
+      /* Primary */
+      .primary .grid {
+        border: 0;
+        margin: 10px 0;
+      }
+      /* Web reponseive */
+      @media (max-width: 900px) {
+        .container-fluid {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .grid {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .timeline {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .scopes .grid {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="goals bg-body card-body">
+        <h1>Goals</h1>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"
+            />
+          </svg>
+          <div class="goal-detail">
+            <p class="lead fw-bold">Goal 1</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              voluptates?
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"
+            />
+          </svg>
+          <div class="goal-detail">
+            <p class="lead fw-bold">Goal 2</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              voluptates?
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"
+            />
+          </svg>
+          <div class="goal-detail">
+            <p class="lead fw-bold">Goal 3</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              voluptates?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team bg-body card-body">
+        <h1>Team</h1>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+            />
+          </svg>
+          <div class="detail">
+            <p class="lead fw-bold">Member 01</p>
+            <p>Name:...</p>
+          </div>
+        </div>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+            />
+          </svg>
+          <div class="detail">
+            <div class="detail">
+              <p class="lead fw-bold">Member 02</p>
+              <p>Name:...</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+            />
+          </svg>
+          <div class="detail">
+            <p class="lead fw-bold">Member 03</p>
+            <p>Name:...</p>
+          </div>
+        </div>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+            />
+          </svg>
+          <div class="detail">
+            <p class="lead fw-bold">Member 04</p>
+            <p>Name:...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline bg-body card-body grid-item-wide">
+        <h1>Timeline</h1>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">01</span>
+          </div>
+          <div class="detail">
+            <p class="lead fw-bold">Project Start</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">02</span>
+          </div>
+          <div class="detail">
+            <p class="lead fw-bold">Project Start</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">03</span>
+          </div>
+          <div class="detail">
+            <div class="detail">
+              <p class="lead fw-bold">Project Start</p>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">04</span>
+          </div>
+          <div class="detail">
+            <p class="lead fw-bold">Project Start</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">05</span>
+          </div>
+          <div class="detail">
+            <p class="lead fw-bold">Project Start</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">06</span>
+          </div>
+          <div class="detail">
+            <p class="lead fw-bold">Project Start</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="circle">
+            <span class="circle-content">07</span>
+          </div>
+          <div class="detail">
+            <p class="lead fw-bold">Project Start</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scopes bg-body card-body">
+        <h1>Scopes</h1>
+        <div class="grid">
+          <div>
+            <p class="fs-3 fw-bold mb-4">IN</p>
+            <div>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+                ratione mollitia id perspiciatis doloribus accusamus ab deleniti
+                recusandae asperiores necessitatibus?
+              </p>
+              <p>
+                Harum sequi animi quidem adipisci a illum quos, aspernatur illo.
+              </p>
+            </div>
+          </div>
+          <div>
+            <p class="fs-3 fw-bold mb-4">Out</p>
+            <div>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+                ratione mollitia id perspiciatis doloribus accusamus ab deleniti
+                recusandae asperiores necessitatibus?
+              </p>
+              <p>
+                Harum sequi animi quidem adipisci a illum quos, aspernatur illo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="primary bg-body card-body">
+        <h1>Primary</h1>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"
+            />
+          </svg>
+          <div class="detail">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              voluptates?
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"
+            />
+          </svg>
+          <div class="detail">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              voluptates?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="index.html" class="btn btn-dark"> Back to main</a>
+    </div>
+  </body>
+</html>

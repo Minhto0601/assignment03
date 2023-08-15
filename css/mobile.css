@@ -1,0 +1,35 @@
+@media (max-width: 500px) {
+  .section-title {
+    text-align: center;
+  }
+  .nav-bar .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .name img {
+    display: none; /* Hide the image on screens <= 500px */
+  }
+  #about .container {
+    grid-template-columns: 1fr;
+  }
+  #job-info .container {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+  #project .project-detail {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .certificate-info {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-info--detail {
+    flex-direction: column;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 1px #d6c08d solid;
+  }
+}
